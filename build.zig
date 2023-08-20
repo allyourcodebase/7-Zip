@@ -11,6 +11,7 @@ pub fn build(b: *std.Build) void {
             .optimize = optimize,
         });
         const flags = [_][]const u8 {
+            "-DZ7_EXTERNAL_CODECS",
             // unaligned access utilized, see C/CpuArch.h
             "-fno-sanitize=alignment",
         };
@@ -46,6 +47,7 @@ pub fn build(b: *std.Build) void {
             .optimize = optimize,
         });
         const flags = [_][]const u8 {
+            "-DZ7_EXTERNAL_CODECS",
             // unaligned access utilized, see C/CpuArch.h
             "-fno-sanitize=alignment",
         };
